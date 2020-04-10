@@ -43,9 +43,9 @@
 Для решения этой задачи необходимо установить библиотеку xlrd, скачать файл <a href="https://stepik.org/media/attachments/lesson/245266/tab.xlsx">https://stepik.org/media/attachments/lesson/245266/tab.xlsx</a> и создать в папке с этим файлом скрипт со следующем содержанием:
 <br/>
 <code>
-    import xlrd \n
-    wb = xlrd.open_workbook('tab.xlsx') \n
-    sheet_names = wb.sheet_names()
+    import xlrd
+    wb = xlrd.open_workbook('tab.xlsx')
+    sheet_names = wb.sheet_names()<br/>
     sh = wb.sheet_by_name(sheet_names[0])
     nmin = sh.row_values(6)[2]
     for rownum in range(7, 27):
